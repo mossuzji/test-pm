@@ -25,7 +25,7 @@ const LoginPage = ({setAuthenticate}) => {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="자동 로그인" />
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={login}>
+      <Button variant="primary" type="submit" onClick={loginUser}>
         로그인
       </Button>
     </Form>
