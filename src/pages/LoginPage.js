@@ -33,4 +33,4 @@ const LoginPage = ({setAuthenticate}) => {
   )
 }
 
-export default LoginPage
+export default LoginPage;

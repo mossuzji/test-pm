@@ -1,0 +1,14 @@
+1) git init -초기화
+2) git config --global user.name "영문"
+2) git config --global user.email "영문"
+4) git contfig --list
+
+5) git add . (홀딩)
+5-1) git status로 확인
+6) git commit -m "코멘트"
+7) git에서 올릴 연결고리 (git remote add 어쩌구)
+8) push 어쩌구
+shift q -> 빠져나가기
+
+9) 특정 파일만 업로드 할 때는
+git add Navbar.js (파일명만 기술)
