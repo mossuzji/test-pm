@@ -14,10 +14,10 @@ const ProductAll = () => {
     let searchQuery = query.get('q')||'';
 
     //로컬에 설치된 json-server로 데이터를 불러와서 보여주는 주소 
-    let url = `http://localhost:5000/products?q=${searchQuery}`;
+    //let url = `http://localhost:5000/products?q=${searchQuery}`;
 
     //my-json-server에서 자료를 가져오기
-    //let url = ` https://my-json-server.typicode.com/mossuzji/test-pm/products?q=${searchQuery}`
+    let url = ` https://my-json-server.typicode.com/mossuzji/test-pm/products?q=${searchQuery}`
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data)
