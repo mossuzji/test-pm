@@ -1,10 +1,20 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
-
+import { useNavigate } from 'react-router-dom'
+const login = ({setAuthenticate}) => {
+  const navigate = useNavigate();
+}
 const LoginPage = () => {
+  
+  const loginUser = (e) => {
+    e.preventDefault();
+    console.log("login user function issue")
+    setAuthenticate(true)
+    navigete('/')
+  }
   return (
     <>
-      <Form>
+      <Form onSubmit = {(e)=> loginUser(e)}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
@@ -17,7 +27,7 @@ const LoginPage = () => {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="자동 로그인" />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" onClick={login}>
         로그인
       </Button>
     </Form>
