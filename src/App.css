@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body {font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; color: #585858;}
+
+/* login area  */
+.login-area {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.login-button .login-text {
+    margin-left: 10px;
+    line-height: 1;
+}
+.logo {display: flex; justify-content: center; margin-bottom: 30px;}
+
+/* menu 영역 */
+.menu-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-area .menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-area .menu-list li {padding: 10px; margin: 0 25px; font-size: 18px;  font-weight: 500; list-style: none; cursor: pointer; transition: color 0.3s;}
+.menu-area .menu-list li:hover {color: brown}
+
+.search-area {position: absolute; right: 0; width: 200px; height: 34px; border-bottom: 1px solid #ddd;}
+.search-area .svg-inline--fa {vertical-align: -8px;}
+.search-area input[type='text'] {border: none; height: 100%; line-height: 1; position: absolute;  left:25px;}
+.search-area input[type='text']:focus {outline: none;}
+/* nav-bar */
+.nav-header {display: flex; justify-content: space-between; align-items: center; margin-right: 20px;}
+.nav-header * {
+    margin: 20px 0 10px 0;
+}
+.nav-header div+div {display: flex; align-items: center;}
+.nav-header div+div img {vertical-align: 2px;}
+.nav-header div+div span {padding-left: 12px;}
+.burger-menu img {width: 30px;}
+/* productALL */
+.row {padding: 50px 0;}
+.col-lg-3 .product-list {margin-bottom: 20px; box-sizing: border-box;}
+.col-lg-3 .pd-image {width: 100%; height: 360px; overflow: hidden; padding: 20px 0 ; background: #efefef; box-sizing: border-box;}
+.col-lg-3 .pd-image img {max-width: 100%; margin-bottom: 15px; transition: all 0.3s;}
+.col-lg-3 .pd-image img:hover {opacity: 0.8;}
+.col-lg-3  .pd-choice {color: brown; margin-top: 16px; font-size: 14px;}
+.col-lg-3  .pd-title {font-weight: 500; color:#333;}
+.col-lg-3  .pd-price {margin-top: 5px; font-size: 16px; color:#666}
+.col-lg-3  .pd-new {color: brown; margin-top: 5px; font-size: 14px;}
+
+/* login form */
+.container form {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 80px auto 0
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* detail page */
+.product-detail {padding: 50px 20px; box-sizing: border-box;}
+.product-detail .productDetail-img {height: 600px; overflow: hidden; text-align: right;}
+.product-detail .productDetail-img img {max-height: 100%;}
+.product-detail  .detail-info .title {font-size: 22px; color:#111; margin: 16px 0 8px;}
+.product-detail  .detail-info .content {width: 50%;}
+.product-detail  .detail-info .price {margin-top: 10px}
+.product-detail  .detail-info .choice {color: brown; margin: 2px 0 20px; font-size: 15px;}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.side-menu {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top:0; left: 0;
+    background: #efefef;
+    overflow-x: hidden;
+    padding-top: 100px;
+    transition: 0.5s;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.side-menu .btn_close {background: none; border: none; position: absolute; right:20px; top:30px; margin-left: 50px;}
+.side-menu .side-menu-list {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    list-style: none;
+    padding:0
 }
+.side-menu .side-menu-list li {width: 100%;}
+.side-menu .side-menu-list li a {color:inherit; display: block; line-height: 50px; text-decoration: none; font-size: 18px; color: #111; transition: all 0.3s; padding: 0 35px}
+.side-menu .side-menu-list li a:hover {background-color: rgb(182, 177, 154); color:#fff}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 63em) {
+    .hide {visibility: visible;}
+
+    .menu-area {display: none;}
+    .search-area {display: none;}
 }
